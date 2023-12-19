@@ -11,4 +11,10 @@ public class UtilController {
 	public int GetInt(String s) {
 		return im.Getint(s);
 	}
+	public void Save(String data) {
+		fm.SaveData(data);
+	}
+	public String userLoad() {
+		return fm.userLoad();
+	}
 }

@@ -9,6 +9,7 @@ public class MainController {
 
 	private void init() {
 		User = pcon.GetPlayer();
+		
 	}
 
 	public void run() {
@@ -98,10 +99,12 @@ public class MainController {
 				InvenMenu();
 			}
 			else if (sel == 4) {
-				
+				System.out.println(pcon.GetSaveData());
+				ucon.Save(pcon.GetSaveData());
+			
 			}
 			else if (sel == 5) {
-
+				pcon.LoadUser(ucon.userLoad());
 			}else if(sel == 6) {
 				pcon.GetState(User);
 			}

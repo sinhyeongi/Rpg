@@ -31,4 +31,10 @@ public class PlayerController {
 	public void GetState(String user) {
 		dao.PrintState(user);
 	}
+	public String GetSaveData() {
+		return dao.GetUserSaveData();
+	}
+	public void LoadUser(String data) {
+		dao.LoadData(data);
+	}
 }

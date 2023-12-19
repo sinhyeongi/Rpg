@@ -24,7 +24,15 @@ public class Player extends Unit{
 	public void setMoney(int money) {
 		this.money = money;
 	}
-
+	public void LoadInvData(String data) {
+		if(data == null) return;
+		if(Inv.size() != 0) Inv.clear();
+		String data2[] = data.split("\n");
+		for(int i = 0 ; i < data2.length; i++) {
+			String data3[] = data2[i].split("/");
+			Inv.add(new Item(data3[0],data3[1],Integer.parseInt(data3[2]),Integer.parseInt(data3[3])));
+		}
+	}
 	//아이템 추가
 	public void SetItem(Item i) {
 		if(money < i.getPrice()) {
