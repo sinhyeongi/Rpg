@@ -1,6 +1,7 @@
 package Util;
 
 import java.lang.annotation.AnnotationTypeMismatchException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InputManger {
@@ -29,7 +30,7 @@ public class InputManger {
 		try {
 		System.out.println(s + "\n>>");
 		inp = scanner.nextInt();
-		}catch(AnnotationTypeMismatchException e) {
+		}catch(InputMismatchException e) {
 			System.out.println("숫자를 입력해주세요");
 			scanner.nextLine();
 		}

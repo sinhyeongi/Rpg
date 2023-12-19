@@ -64,7 +64,7 @@ public class Unit {
 		this.level = level;
 	}
 	public String SaveData() {
-		return name+"/"+hp+"/"+mp+"/"+damage+"/"+defense+"/"+level+"/"+party;
+		return name+"/"+hp+"/"+mp+"/"+damage+"/"+defense+"/"+level+"/"+(party .equals("")? "null" : party );
 	}
 	public String toString(String user) {
 		return "[name : " + name + "] [hp : " + hp + "] [mp : " + mp + "] [공격력 : " + damage + "] [방어력 : " + defense

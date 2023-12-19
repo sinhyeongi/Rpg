@@ -8,6 +8,9 @@ class UnitController {
 	public void PrintParty(String user) {
 		dao.PrintParty(user);
 	}
+	public  int PartySize() {
+		return dao.PartySize();
+	}
 	public void NewParyMember(String user) {
 		dao.NewPartyMember(user);
 	}

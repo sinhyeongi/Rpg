@@ -69,7 +69,6 @@ public class Player extends Unit{
 	public void PlayerWearing(Item i) {
 		int idx = -1;
 		switch(i.getType()) {
-		
 		case "무기":
 			idx = 0;
 			break;
@@ -80,9 +79,12 @@ public class Player extends Unit{
 			idx = 2;
 			break;
 		}
+		if(Wearing[idx].getType() != null) {
+			Inv.add(Wearing[idx]);
+		}
 		Wearing[idx] = i;
 		DeleteItem(Wearing[idx].getName());
-		System.out.println(Wearing[idx].getName()+"아이템 착용 완료");
+		System.out.println(Wearing[idx].getName()+" 아이템 착용 완료");
 	}
 	public int GetInvSize() {
 		return Inv.size();

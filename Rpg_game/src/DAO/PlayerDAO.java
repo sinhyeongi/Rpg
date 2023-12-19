@@ -88,7 +88,7 @@ public class PlayerDAO {
 			data += player.get(i).getMoney() + "+";
 			if(GetInvSaveData().length() != 0)
 				data += GetInvSaveData();
-			data += "\n";
+			data += "\n$";
 		}
 		if (data.length() != 0) {
 			data = data.substring(0, data.length() - 1);
@@ -110,7 +110,7 @@ public class PlayerDAO {
 		if (player.size() != 0) {
 			player.clear();
 		}
-		if (data.indexOf("$") != -1) {
+		if (data.indexOf("\\$") != -1) {
 			String data2[] = data.split("$");
 			for (int i = 0; i < data2.length; i++) {
 				if (data2[i].indexOf("+") != -1) {
@@ -133,8 +133,6 @@ public class PlayerDAO {
 		}
 		
 		if (data.indexOf("+") != -1) {
-			System.out.println(data);
-			System.out.println(data.indexOf("+"));
 			String t[] = data.split("\\+");
 			String p[] = t[0].split("/");
 			player.add(new Player(p[0], Integer.parseInt(p[1]), Integer.parseInt(p[2]), Integer.parseInt(p[3]),

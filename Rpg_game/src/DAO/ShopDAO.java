@@ -39,11 +39,11 @@ public class ShopDAO {
 		return false;
 	}
 	public Item UserBuyItem(String type,int idx) {
-		if(CheckIdx(idx))return null;
-		if(!list.get(idx).getType().equals(type)) {
+		if(CheckIdx(idx-1))return null;
+		if(!list.get(idx-1).getType().equals(type)) {
 			System.out.println("잘못된 번호 입니다.");
 			 return null;
 		}
-		return list.get(idx);
+		return list.get(idx-1);
 	}
 }

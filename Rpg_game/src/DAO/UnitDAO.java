@@ -13,6 +13,9 @@ public class UnitDAO {
 	public UnitDAO() {
 		list = new ArrayList<Unit>();
 	}
+	public int PartySize() {
+		return list.size();
+	}
 	public String SaveData() {
 		String data ="";
 		for(int i = 0 ; i < list.size(); i++) {
