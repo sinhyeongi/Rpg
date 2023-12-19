@@ -59,6 +59,7 @@ public class MainController {
 		while(true) {
 			System.out.println("=============== [인벤토리] ================");
 			pcon.PrintInven(User);
+			if(pcon.GetInvSize(User) == 0) break;
 			int sel = ucon.GetInt("[1.아이템 착용] [2.아이템 판매] [0.뒤로가기]");
 			if(sel == 0) {
 				break;
