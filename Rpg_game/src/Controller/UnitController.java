@@ -20,6 +20,11 @@ class UnitController {
 	public void PartySort() {
 		dao.PartySort();
 	}
-	
+	public String UnitSave() {
+		return dao.SaveData();
+	}
+	public void UnitLoad(String data) {
+		dao.LoadData(data);
+	}
 	
 }

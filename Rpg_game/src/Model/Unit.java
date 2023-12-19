@@ -63,6 +63,9 @@ public class Unit {
 	public void setLevel(int level) {
 		this.level = level;
 	}
+	public String SaveData() {
+		return name+"/"+hp+"/"+mp+"/"+damage+"/"+defense+"/"+level+"/"+party;
+	}
 	public String toString(String user) {
 		return "[name : " + name + "] [hp : " + hp + "] [mp : " + mp + "] [공격력 : " + damage + "] [방어력 : " + defense
 				+ "] [level=" + level + "] [파티중 :" + party.equals(user) + "]";

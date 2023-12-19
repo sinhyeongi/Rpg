@@ -99,10 +99,7 @@ public class PlayerDAO {
 	private String GetInvSaveData() {
 		String data = "";
 		for (int i = 0; i < player.size(); i++) {
-			data += player.get(i).InvenData() + "";
-		}
-		if (data.length() != 0) {
-			data = data.substring(0, data.length() - 1);
+			data += player.get(i).InvenData();
 		}
 		return data;
 	}

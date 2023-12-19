@@ -99,12 +99,11 @@ public class MainController {
 				InvenMenu();
 			}
 			else if (sel == 4) {
-				System.out.println(pcon.GetSaveData());
-				ucon.Save(pcon.GetSaveData());
-			
+				ucon.Save(pcon.GetSaveData(),unitcon.UnitSave());
 			}
 			else if (sel == 5) {
 				pcon.LoadUser(ucon.userLoad());
+				unitcon.UnitLoad(ucon.UnitLoad());
 			}else if(sel == 6) {
 				pcon.GetState(User);
 			}

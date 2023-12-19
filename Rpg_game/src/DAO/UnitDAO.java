@@ -13,7 +13,26 @@ public class UnitDAO {
 	public UnitDAO() {
 		list = new ArrayList<Unit>();
 	}
-
+	public String SaveData() {
+		String data ="";
+		for(int i = 0 ; i < list.size(); i++) {
+			data += list.get(i).SaveData()+"\n";
+		}
+		if(data.length() != 0)
+			data = data.substring(0,data.length()-1);
+		return data;
+	}
+	public void LoadData(String data) {
+		if(data.length() == 0|| data == null) return;
+		if(list.size() != 0) list.clear();
+		String t[] =data.split("\n");
+		for(int i = 0 ; i < t.length; i++) {
+			String d[] = t[i].split("/");
+			list.add(new Unit(d[0],Integer.parseInt( d[1]), Integer.parseInt( d[2]), Integer.parseInt( d[3]), Integer.parseInt( d[4])));
+			list.get(i).setLevel(Integer.parseInt( d[5]));
+			list.get(i).setParty(d[6]);
+		}
+	}
 	public void PrintParty(String user) {
 		
 		System.out.println("============= [파티원] =================");
